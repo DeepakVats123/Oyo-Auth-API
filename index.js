@@ -13,6 +13,10 @@ app.use(express.json());
 app.use(cors());
 app.post("/signup", Signup);
 app.post("/login", Login);
+app.get("/", (req,res)=>{
+ 
+  res.send("Welcome to oyo user api")
+})
 app.listen(port, () => {
   try {
     console.log("Listening on Port");
@@ -21,3 +25,4 @@ app.listen(port, () => {
     console.log(e);
   }
 });
+
